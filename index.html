@@ -25,7 +25,9 @@
             box-shadow: 0 4px 8px rgba(0,0,0,.5);
             border-radius:15px;
             transition: transform 0.3s ease-in-out;
-            }
+
+            position:relative;
+        }
         .business-card:hover{
             transform:scale(1.05);
         }
@@ -67,6 +69,35 @@
             text-decoration:none;
             color:#00f;
         }
+
+        .skill-card{
+            position: absolute;
+            background: rgba(255,255,255,0.3);
+            width:100%;
+            backdrop-filter:blur(50px);
+            height: 100%;
+            top:40px;
+            height: 0%;
+
+            overflow: hidden;
+            transition: height 0.3s ease-in-out;
+        }
+        .skill-title{
+            margin-left:30px;
+            font-size: 20px;
+            margin-top:70px;
+            font-weight:bold;
+        }
+        .skill-card ul{
+            margin-left:30px;
+        }
+        .skill-card li{
+            font-size:25px;
+            margin-bottom:10px;
+        }
+        .business-card:hover .skill-card{
+            height: 84%;
+        }
 </style>
 </head>
 <body>
@@ -86,6 +117,15 @@
                 <a href="https://twitter.com">Twitter</a>
                 <a href="https://github.com">Github</a>
             </div>
+        </div>
+        <div class="skill-card">
+            <div class="skill-title">My Skills</div>
+            <ul>
+                <li>Skill 1</li>
+                <li>Skill 2</li>
+                <li>Skill 3</li>
+                <li>Skill 4</li>
+            </ul>
         </div>
     </div>
 </body>
